@@ -7,7 +7,7 @@ const Header = () => {
   return(
     <div>
       <Jumbotron className='jumbotron'>
-        <div className='row innerdiv'>
+        <div className='row innerdiv d-flex align-items-center'>
           <div className='col-12'>
             <h1 className='innertext'>{state.name}</h1>
           </div>

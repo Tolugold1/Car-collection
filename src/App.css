@@ -28,7 +28,7 @@ a  {
   border-radius: 0;
   background-image: url('../public/assets/carimage/022-rolls-royce-boat-tail-front-static-2022.jpeg');
   object-fit: contain;
-  height: 900px;
+  padding: 50px;
 }
 
 
@@ -48,17 +48,16 @@ Nav {
   margin: 100px;
 }
 
+.innerdiv {
+  margin: 120px;
+}
+
 .innertext, .innertext1{
   font-family: Koulen;
   font-size: 100px;
   font-weight: bolder;
   color:rgba(166, 114, 54, 0.7);
 }
-
-.innerdiv {
-  padding: 50px;
-}
-
 
 #step2 {
   background-color: rgb(204, 217, 221);
@@ -91,59 +90,47 @@ Nav {
 
 
 @media (min-width: 1200px) {
+  .innertext, .innertext1{
+    font-family: Koulen;
+    font-size: 100px;
+    font-weight: bolder;
+    color:rgba(166, 114, 54, 0.7);
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199) {
-  .cardname {
-    font-family: Koulen;
-    font-size: 100px;
-    color:rgb(191, 136, 81)
-  }
-
-  .cardheadtext {
+  .innertext, .innertext1{
     font-family: Koulen;
     font-size: 80px;
-    color: rgb(191, 136, 81);
+    font-weight: bolder;
+    color:rgba(166, 114, 54, 0.7);
   }
 }
 
 @media (min-width: 770px) and (max-width: 991px) {
-  .cardname {
+  .innertext, .innertext1{
     font-family: Koulen;
     font-size: 60px;
-    color:rgb(191, 136, 81)
-  }
-
-  .cardheadtext {
-    font-family: Koulen;
-    font-size: 40px;
-    color: rgb(191, 136, 81);
+    font-weight: bolder;
+    color:rgba(166, 114, 54, 0.7);
   }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
-  .cardname {
+  .innertext, .innertext1{
     font-family: Koulen;
     font-size: 40px;
-    color:rgb(191, 136, 81)
+    font-weight: bolder;
+    color: rgba(166, 114, 54, 0.7);
   }
-
-  .cardheadtext {
-    font-family: Koulen;
-    font-size: 20px;
-    color: rgb(191, 136, 81);
-  }
+  
 }
 
 @media (max-width: 575px) {
-  .cardname {
+  .innertext, .innertext1{
     font-family: Koulen;
     font-size: 30px;
-    color:rgb(191, 136, 81)
-  }
-  .cardheadtext {
-    font-family: Koulen;
-    font-size: 20px;
-    color: rgb(191, 136, 81);
+    font-weight: bolder;
+    color:rgba(166, 114, 54, 0.7);
   }
 }
