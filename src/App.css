@@ -1,38 +1,149 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+}
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(200, 209, 210);
+}
+.navhead {
+  color: white;
+  background-color: black;
+  background-position-x: 50%;
+}
+
+a  {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.jumbotron {
+  border-radius: 0;
+  background-image: url('../public/assets/carimage/022-rolls-royce-boat-tail-front-static-2022.jpeg');
+  object-fit: contain;
+  height: 900px;
+}
+
+
+Nav {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fa {
+  color: whitesmoke;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.companyname {
+  font-size: 40px;
+  color:whitesmoke;
+}
+.text {
+  margin: 100px;
+}
+
+.innertext, .innertext1{
+  font-family: Koulen;
+  font-size: 100px;
+  font-weight: bolder;
+  color:rgba(166, 114, 54, 0.7);
+}
+
+.innerdiv {
+  padding: 50px;
+}
+
+
+#step2 {
+  background-color: rgb(204, 217, 221);
+  padding: 50px;
+  padding-top: 70px;
+  border-radius: 10px;
+  margin-top: -60px;
+}
+
+.cardhover:hover {
+  background-color: rgb(204, 217, 221);
+}
+
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199) {
+  .cardname {
+    font-family: Koulen;
+    font-size: 100px;
+    color:rgb(191, 136, 81)
+  }
+
+  .cardheadtext {
+    font-family: Koulen;
+    font-size: 80px;
+    color: rgb(191, 136, 81);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 770px) and (max-width: 991px) {
+  .cardname {
+    font-family: Koulen;
+    font-size: 60px;
+    color:rgb(191, 136, 81)
   }
-  to {
-    transform: rotate(360deg);
+
+  .cardheadtext {
+    font-family: Koulen;
+    font-size: 40px;
+    color: rgb(191, 136, 81);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .cardname {
+    font-family: Koulen;
+    font-size: 40px;
+    color:rgb(191, 136, 81)
+  }
+
+  .cardheadtext {
+    font-family: Koulen;
+    font-size: 20px;
+    color: rgb(191, 136, 81);
+  }
+}
+
+@media (max-width: 575px) {
+  .cardname {
+    font-family: Koulen;
+    font-size: 30px;
+    color:rgb(191, 136, 81)
+  }
+  .cardheadtext {
+    font-family: Koulen;
+    font-size: 20px;
+    color: rgb(191, 136, 81);
   }
 }
