@@ -25,10 +25,9 @@ a  {
 }
 
 .jumbotron {
-  border-radius: 0;
   background-image: url('../public/assets/carimage/022-rolls-royce-boat-tail-front-static-2022.jpeg');
-  object-fit: contain;
   padding: 50px;
+  background-size: cover;
 }
 
 
@@ -82,9 +81,27 @@ Nav {
   transform: translateY(-100%);
 }
 
+.history {
+  background-color: rgb(212, 212, 212);
+  padding: 50px;
 
+}
 
+.historytext {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+.historytext1 {
+  margin: 30px auto;
+}
 
+.historytext2 {
+  margin-top: 40px;
+
+}
+.historytext2 h2 {
+  text-decoration: underline;
+}
 
 
 

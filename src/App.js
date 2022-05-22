@@ -3,6 +3,7 @@ import Header from './components/HeadComponent';
 import Company from './components/CompanyComponent';
 import HeaderNav from './components/HeaderNavComponent'
 import Headroom from 'react-headroom';
+import History from './components/HistoryComponent';
 
 
 class App extends React.Component {
@@ -14,6 +15,7 @@ class App extends React.Component {
         </Headroom>
         <Header />
         <Company />
+        <History />
       </div>
     )
   }

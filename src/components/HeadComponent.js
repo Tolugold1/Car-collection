@@ -5,7 +5,6 @@ import { CARCARD } from '../Shared/HomeCarCard';
 const Header = () => {
   const [state] = useState(CARCARD)
   return(
-    <div>
       <Jumbotron className='jumbotron'>
         <div className='row innerdiv d-flex align-items-center'>
           <div className='col-12'>
@@ -16,7 +15,6 @@ const Header = () => {
           </div>
         </div>
       </Jumbotron>
-    </div>
   )
 }
 
