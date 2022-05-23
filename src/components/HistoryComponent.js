@@ -1,5 +1,4 @@
 import React from 'react';
-import './Loader';
 import { Card, CardImg, CardBody, CardText } from 'reactstrap';
 import $ from 'jquery';
 
