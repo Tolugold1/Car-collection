@@ -84,7 +84,10 @@ Nav {
 .history {
   background-color: rgb(212, 212, 212);
   padding: 50px;
-
+}
+.showOver {
+  display: none;
+  margin: auto;
 }
 
 .historytext {

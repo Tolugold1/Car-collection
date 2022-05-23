@@ -1,6 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
+import './Loader';
+import { Tooltip, Card, CardImg, CardBody, CardText, PopoverBody } from 'reactstrap';
+import $ from 'jquery';
 
-const History = () => {
+class History extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {
+    this.showCard();
+    this.hideCard();
+
+  }
+
+  showCard = () => {
+    $('#showCard').on('mouseover', function(){
+      $('#autoinfo').show(2000);
+    })
+  }
+  hideCard = () => {
+    $('#autoinfo').on('mouseout', function(){
+      $('#autoinfo').hide(1000);
+    })
+  }
+
+  render() {
+
   return(
     <div className='container-fluid history'>
       <div className='text-center historytext'>
@@ -10,10 +36,21 @@ const History = () => {
       <div className='text-center historytext1'>
         <h1 className='carhistory'>Car History</h1>
       </div>
-        <img  className='rounded mx-auto d-block' src='assets/carimage/220px-SteamMachineOfVerbiestIn1678.jpeg' alt='first car design'></img>
-      <div className='text-center mt-4'>
-        <h2>History of automobile</h2>
+        <img  className='rounded-circle mx-auto d-block' src='assets/carimage/220px-SteamMachineOfVerbiestIn1678.jpeg' alt='first car design'></img>
+      <div id="showCard" className='text-center mt-4' onMouseOver={this.showCard} >
+        <h2 className='historyTooltip' style={{ color: 'blueviolet'}}>History of automobile</h2>
       </div>
+      <div id='autoinfo' className='showOver text-center col-sm-6' onMouseOver={this.showCard} onMouseOut={this.hideCard} >
+        <Card>
+          <CardImg width='100%' src='assets/carimage/Ford_Model_T_and_VW_type_11_Luxus,_Technisches_Museum_Wien,_Juni_2009.jpeg' alt='brief history image'></CardImg>
+          <CardBody>
+            <CardText>
+              Development of the automobile started in 1672 with the invention of the first steam-powered vehicle, which led to the creation of the first steam-powered automobile capable of human transportation, built by Nicolas-Joseph Cugnot in 1769.
+            </CardText>
+          </CardBody>
+        </Card>
+      </div>
+      
       <div className='row historytext2'>
         <div className='col-12 col-sm-4'>
           <p>The first working steam-powered vehicle was designed—and quite possibly built—by Ferdinand Verbiest, a Flemish member of a Jesuit mission in China around 1672. It was a 65-centimetre (26 in)-long scale-model toy for the Kangxi Emperor that was unable to carry a driver or a passenger. It is not known with certainty if Verbiest's model was successfully built or run.
@@ -35,6 +72,7 @@ const History = () => {
       </div>
     </div>
   )
+  }
 }
 
 export default History;

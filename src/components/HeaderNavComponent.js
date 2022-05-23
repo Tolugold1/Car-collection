@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {  Navbar, NavbarBrand, Nav, Collapse, NavItem, NavLink, NavbarText, NavbarToggler  } from 'reactstrap';
-import Headroom from 'react-headroom';
 
 const HeaderNav = () => {
   const [isOpen, setIsOpen] = useState(false);

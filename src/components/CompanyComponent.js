@@ -33,7 +33,7 @@ class Company extends React.Component {
     })
     return(
       <div id='step2' className='container'>
-        <h3>Top car production companies in the world</h3><hr/>
+        <h3>Top car producing companies in the world</h3><hr/>
         <CardColumns>
           { RenderCard }
         </CardColumns>
