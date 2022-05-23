@@ -1,12 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Loader';
-import { Tooltip, Card, CardImg, CardBody, CardText, PopoverBody } from 'reactstrap';
+import { Card, CardImg, CardBody, CardText } from 'reactstrap';
 import $ from 'jquery';
 
 class History extends React.Component {
-  constructor(props) {
-    super(props)
-  }
 
   componentDidMount() {
     this.showCard();
