@@ -18,10 +18,10 @@ const HeaderNav = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className='mr-auto' navbar>
             <NavItem>
-              <NavLink href='/'>Home</NavLink>
+              <NavLink href='/Home'>Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href='/collection'>Collection</NavLink>
+              <NavLink href='/Cars'>Cars</NavLink>
             </NavItem>
           </Nav>
           <NavbarText className='ml-auto'>Get latest car updates</NavbarText>

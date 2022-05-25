@@ -1,22 +1,15 @@
 import React from 'react';
-import Header from './components/HeadComponent';
-import Company from './components/CompanyComponent';
-import HeaderNav from './components/HeaderNavComponent'
-import Headroom from 'react-headroom';
-import History from './components/HistoryComponent';
-
+import { BrowserRouter } from 'react-router-dom';
+import Root from './components/RootComponent';
 
 class App extends React.Component {
   render() {
     return(
+      <BrowserRouter>
       <div>
-        <Headroom>
-        <HeaderNav />
-        </Headroom>
-        <Header />
-        <Company />
-        <History />
+        <Root />
       </div>
+      </BrowserRouter>
     )
   }
 }

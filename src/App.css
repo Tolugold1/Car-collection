@@ -25,9 +25,10 @@ a  {
 }
 
 .jumbotron {
-  background-image: url('../public/assets/carimage/022-rolls-royce-boat-tail-front-static-2022.jpeg');
+  background-image: url('../public/assets/carimage/jagua2.jpeg');
   padding: 50px;
   background-size: cover;
+  border-radius: 0;
 }
 
 
@@ -106,6 +107,24 @@ Nav {
   text-decoration: underline;
 }
 
+.carcollections {
+  background-color: whitesmoke;
+  padding: 40px;
+  border-radius: 70px;
+  height: auto;
+}
+div .cardimage {
+  margin-top: 15px;
+}
+
+div .cardimage:hover {
+  margin-top: 3px;
+  box-shadow: 0 6px 10px  0 rgba(0, 0, 0, 0.5);
+}
+
+
+
+
 
 
 
@@ -114,7 +133,7 @@ Nav {
     font-family: Koulen;
     font-size: 100px;
     font-weight: bolder;
-    color:rgba(166, 114, 54, 0.7);
+    color:rgba(135, 105, 76, 0.9)
   }
 }
 
