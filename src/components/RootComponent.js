@@ -3,7 +3,7 @@ import Headroom from 'react-headroom';
 import Header from './HeadComponent';
 import HeaderNav from './HeaderNavComponent'
 import Home from './HomeComponent';
-import Footer from './footer'
+import Footer from './footer';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import GalleryDisplay from './IndividualGallery';
 import Cars from './CarCollectionComponent';
@@ -44,7 +44,6 @@ class Root extends React.Component {
           <HeaderNav />
         </Headroom>
         <Header />
-        
         <Switch>
           <Route exact path='/Home' component={() => <Home car={this.props.cars} carname={this.props.carname} failedTogetCarName = {this.props.carname.errMess}/>}/>
           <Route path='/Home/:carId' component={CarGallery}/>

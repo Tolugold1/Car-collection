@@ -11,7 +11,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(200, 209, 210);
+  background-color: whitesmoke;
 }
 .navhead {
   color: white;
@@ -132,12 +132,12 @@ ul {
 }
 
 #slider {
-  display: block;
   position: relative;
   overflow: hidden;
 }
 
 #slider ul {
+  z-index: 1000;
   display: flex;
   padding: 0;
   margin: 0;
@@ -145,6 +145,10 @@ ul {
   left: 0;
 }
 
+.developerPics:hover {
+  margin-top: 2px;
+  box-shadow: 4 6px 10px  4 rgba(0, 0, 0, 0.5);
+}
 
 
 

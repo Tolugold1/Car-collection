@@ -1,7 +1,8 @@
 import React from 'react';
 import Company from './CompanyComponent';
 import History from './HistoryComponent';
-import Cars from './CarCollectionComponent'
+import Cars from './CarCollectionComponent';
+import Developer from './developerDetails';
 
 const Home = (props) => {
   return(
@@ -9,6 +10,7 @@ const Home = (props) => {
       <Company carname={props.carname} failedTogetCarName={props.failedTogetCarName} />
       <History />
       <Cars car={props.car}/>
+      <Developer />
     </div>
   )
 }

@@ -1,8 +1,9 @@
 import React from 'react';
-import { baseUrl } from '../Shared/URL'
+import { baseUrl } from '../Shared/URL';
 
-const Footer = () => {
-   return(
+class Footer extends React.Component {
+   render() {
+      return(
          <div className='container-fluid footer' style={{ padding: '30px'}}>
             <div className='row m-5'>
                <div className='col-12 col-sm-2 offset-1 justify-content-center align-self-center'>
@@ -30,29 +31,11 @@ const Footer = () => {
                      <li className='mt-2'><a href='tel:09063530888'><span className='fa fa-whatsapp'></span> 09063530888</a></li>
                   </ul>
                </div>
-               <div id='slideImage' className='carpics' style={{width: '280px', height: '150px'}}>
-                  <div id='slider'>
-                     <ul>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                        <li><img className='img-fluid' src={baseUrl + ''}/></li>
-                     </ul>
-                  </div>
-               </div>
+               
             </div>
          </div>
-   )
+      )
+   }
 }
 
 export default Footer;
