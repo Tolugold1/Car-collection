@@ -101,7 +101,6 @@ Nav {
 
 .historytext2 {
   margin-top: 40px;
-
 }
 .historytext2 h2 {
   text-decoration: underline;
@@ -109,7 +108,7 @@ Nav {
 
 .carcollections {
   background-color: whitesmoke;
-  padding: 40px;
+  padding: 60px;
   border-radius: 70px;
   height: auto;
 }
@@ -118,9 +117,36 @@ div .cardimage {
 }
 
 div .cardimage:hover {
-  margin-top: 3px;
+  z-index: 1000;
+  transform: scale(1.3, 1.1);
   box-shadow: 0 6px 10px  0 rgba(0, 0, 0, 0.5);
 }
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: black;
+  min-height: 300px;
+}
+
+#slider {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+#slider ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+
+
 
 
 

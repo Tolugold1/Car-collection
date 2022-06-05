@@ -1,0 +1,4 @@
+export const ADDCAR = 'ADDCAR';
+export const CARFAILED = 'CARFAILED';
+export const ADDCARNAME = 'ADDCARNAME';
+export const FAILEDTOGETCARNAME = 'FAILEDTOGETCARNAME';

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardImg, CardBody, CardText } from 'reactstrap';
 import $ from 'jquery';
+import { baseUrl } from '../Shared/URL'
 
 class History extends React.Component {
 
@@ -24,7 +25,7 @@ class History extends React.Component {
   render() {
 
   return(
-    <div className='container-fluid history'>
+    <div className='container-fluid history' id='history'>
       <div className='text-center historytext'>
         <h1 className='subhistorytext'>A place for storytelling</h1>
         <p>WRITTEN BY TOLUGOLD, A WEB DEVELOPER <i className="fa fa-pencil fa-lg" aria-hidden="true"></i></p>
@@ -32,13 +33,13 @@ class History extends React.Component {
       <div className='text-center historytext1'>
         <h1 className='carhistory'>Car History</h1>
       </div>
-        <img  className='rounded-circle mx-auto d-block' src='assets/carimage/220px-SteamMachineOfVerbiestIn1678.jpeg' alt='first car design'></img>
+        <img  className='rounded-circle mx-auto d-block' src={baseUrl + 'image/220px-SteamMachineOfVerbiestIn1678.jpeg'} alt='first car design'></img>
       <div id="showCard" className='text-center mt-4' onMouseOver={this.showCard} >
         <h2 className='historyTooltip' style={{ color: 'blueviolet'}}>History of automobile</h2>
       </div>
       <div id='autoinfo' className='showOver text-center col-sm-6' onMouseOver={this.showCard} onMouseOut={this.hideCard} >
         <Card>
-          <CardImg width='100%' src='assets/carimage/Ford_Model_T_and_VW_type_11_Luxus,_Technisches_Museum_Wien,_Juni_2009.jpeg' alt='brief history image'></CardImg>
+          <CardImg width='100%' src={baseUrl + 'image/Ford_Model_T_and_VW_type_11_Luxus,_Technisches_Museum_Wien,_Juni_2009.jpeg'} alt='brief history image'></CardImg>
           <CardBody>
             <CardText>
               Development of the automobile started in 1672 with the invention of the first steam-powered vehicle, which led to the creation of the first steam-powered automobile capable of human transportation, built by Nicolas-Joseph Cugnot in 1769.

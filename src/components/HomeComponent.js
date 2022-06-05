@@ -1,15 +1,14 @@
 import React from 'react';
-
 import Company from './CompanyComponent';
 import History from './HistoryComponent';
 import Cars from './CarCollectionComponent'
 
-const Home = () => {
+const Home = (props) => {
   return(
     <div>
-      <Company />
+      <Company carname={props.carname} failedTogetCarName={props.failedTogetCarName} />
       <History />
-      <Cars />
+      <Cars car={props.car}/>
     </div>
   )
 }
