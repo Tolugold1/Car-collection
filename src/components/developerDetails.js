@@ -35,7 +35,7 @@ class Developer extends React.Component {
    render() {
       return(
          <>
-         <div className='conatiner' style={{backgroundColor: 'whitesmoke'}}>
+         <div id="Developer" className='conatiner' style={{backgroundColor: 'whitesmoke'}}>
             <div className='row'>
                <div className='col-12 col-sm-5 offset-1 mt-5 mb-5'>
                   <Card style={{borderRadius: '5%', padding: '3px', background: 'black'}} className="developerPics">

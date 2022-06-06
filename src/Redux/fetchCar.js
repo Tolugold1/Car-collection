@@ -1,13 +1,16 @@
 import * as prototypes from './prototypes';
 
-export const cars = (state = { errMess: null, cars: [] }, action) => {
+export const cars = (state = {Loading: true, errMess: null, cars: [] }, action) => {
 
    switch (action.type) {
       case prototypes.ADDCAR:
-         return {...state, errMess: null, cars: action.payload }
+         return {...state, Loading: false,  errMess: null, cars: action.payload }
 
       case prototypes.CARFAILED:
-         return { ...state, errMess: action.payload, cars: [] };
+         return { ...state, Loading: false,  errMess: action.payload, cars: [] };
+      
+      case prototypes.LOADINGCAR:
+         return { ...state, Loading: true, errMess: null, cars: [] };
          
       default:
          return (state)

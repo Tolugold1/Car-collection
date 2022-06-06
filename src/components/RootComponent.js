@@ -33,6 +33,7 @@ class Root extends React.Component {
     const CarGallery = ({match}) => {
       return(
         <GalleryDisplay selectedCar={this.props.cars.cars.filter((carImage) => carImage.id === parseInt(match.params.carId, 10))[0]}
+        loading = {this.props.cars.Loading}
         carFailed = {this.props.cars.errMess}
         />
       )
@@ -45,9 +46,9 @@ class Root extends React.Component {
         </Headroom>
         <Header />
         <Switch>
-          <Route exact path='/Home' component={() => <Home car={this.props.cars} carname={this.props.carname} failedTogetCarName = {this.props.carname.errMess}/>}/>
+          <Route exact path='/Home' component={() => <Home car={this.props.cars} carFailed={this.props.cars.errMess} carname={this.props.carname} failedTogetCarName = {this.props.carname.errMess} carLoading={this.props.cars.Loading} carnameLoading={this.props.carname.Loading}/>}/>
           <Route path='/Home/:carId' component={CarGallery}/>
-          <Route path='/Cars' component={() => <Cars car={this.props.cars} carFailed = {this.props.cars.errMess}/>} />
+          <Route path='/Cars' component={() => <Cars car={this.props.cars} carFailed = {this.props.cars.errMess} carLoading={this.props.cars.Loading}/>} />
           <Route path='/Cars/:carId' component={CarGallery}/>
           <Redirect exact to='/Home' />
         </Switch>

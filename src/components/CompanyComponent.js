@@ -1,9 +1,13 @@
 import React from 'react';
 import { Card, CardTitle, CardImg, CardText, CardBody, CardColumns } from 'reactstrap';
 import { baseUrl } from '../Shared/URL';
+import Loading from './Loading';
 
-const CarnameCard = ({ item, failedToGetCarName }) => {
-  if (failedToGetCarName) {
+const CarnameCard = ({ item, failedToGetCarName, carnameLoading }) => {
+
+  if (carnameLoading) {
+    return(<div style={{ height: '300px',}}><Loading /></div>)
+  } else if (failedToGetCarName) {
     return(<div>{failedToGetCarName}</div>)
   } else if (item) {
     return(
@@ -39,7 +43,7 @@ const Company = (props) => {
     <div id='step2' className='container' >
       <h3>Top car producing companies in the world</h3><hr/>
       <CardColumns>
-        <CarnameCard item={props.carname} failedToGetCarName={props.failedTogetCarName}/>
+        <CarnameCard item={props.carname} failedToGetCarName={props.failedTogetCarName} carnameLoading={props.carnameLoading}/>
       </CardColumns>
   </div>
   )

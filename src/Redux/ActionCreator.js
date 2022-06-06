@@ -2,6 +2,7 @@ import * as prototypes from './prototypes';
 import {baseUrl} from '../Shared/URL';
 
 export const fetchCARS = () => async (dispatch) => {
+  dispatch(carLoading(true))
   return fetch(baseUrl + 'cars')
     .then(response => {
       if (response.ok) {
@@ -33,7 +34,12 @@ export const car_failed = (errMess) => ({
    payload: errMess
 })
 
+export const carLoading = () => ({
+  type: prototypes.LOADINGCAR
+})
+
 export const fetchCarName = () => async (dispatch) => {
+  dispatch(carnameLoading(true))
   return fetch(baseUrl + 'carname')
     .then(response => {
       if (response.ok) {
@@ -62,4 +68,8 @@ export const addCarName = (carname) => ({
 export const carNameFailed = (errMess)=> ({
   type: prototypes.FAILEDTOGETCARNAME,
   payload: errMess
+})
+
+export const carnameLoading = () => ({
+  type: prototypes.LOADINGCARCOMPANYNAME
 })

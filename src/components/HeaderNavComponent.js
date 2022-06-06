@@ -24,7 +24,6 @@ const HeaderNav = () => {
               <NavLink href='/Cars'>Cars</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText className='ml-auto'>Get latest car updates</NavbarText>
         </Collapse>
       </Navbar>
     </div>

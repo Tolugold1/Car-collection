@@ -3,9 +3,12 @@ import { Gallery, Item } from 'react-photoswipe-gallery';
 import { Media } from 'reactstrap';
 import Bugatti from '../Shared/bugati.jpeg';
 import { baseUrl } from '../Shared/URL';
+import Loading from './Loading'
 
-const RenderImages = ({ Details, carFailed }) => {
-   if (carFailed) {
+const RenderImages = ({ Details, carFailed, loading }) => {
+   if (loading) {
+      return(<div><Loading /></div>)
+   } else if (carFailed) {
       return(<div>{carFailed}</div>)
    } else if (Details) {
       return(
@@ -68,8 +71,8 @@ const RenderImages = ({ Details, carFailed }) => {
 const GalleryDisplay = (props) => {
    return(
       <div>
-         <div >
-            <RenderImages Details={props.selectedCar} carFailed={props.carFailed}/>
+         <div className='container'>
+            <RenderImages Details={props.selectedCar} carFailed={props.carFailed} loading={props.loading}/>
          </div>
       </div>
    )
