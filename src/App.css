@@ -150,6 +150,11 @@ ul {
   box-shadow: 4 6px 10px  4 rgba(0, 0, 0, 0.5);
 }
 
+.m-body {
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
 
 
 
@@ -203,3 +208,5 @@ ul {
     color:rgba(166, 114, 54, 0.7);
   }
 }
+
+

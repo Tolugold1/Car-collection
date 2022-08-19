@@ -27,7 +27,7 @@ const RenderImages = ({ Details, carFailed, loading }) => {
                            height={pics.height}
                            width={pics.width}
                            >
-                              {({ ref, open }) => (
+                              {({ ref, open, key }) => (
                                  <div>
                                     <img
                                     ref={ref}
@@ -37,6 +37,7 @@ const RenderImages = ({ Details, carFailed, loading }) => {
                                     width='200'
                                     height='140'
                                     alt=''
+                                    key={key}
                                     />
                                  </div>
                               )}
@@ -53,7 +54,7 @@ const RenderImages = ({ Details, carFailed, loading }) => {
                   <Media left middle href='#'>
                      <Media object src={baseUrl + Details.image } width='160px' height='100px' alt='car image'/>
                   </Media>
-                  <Media body className='ml-3'>
+                  <Media body className='m-body ml-3'>
                      <Media heading tag='h2' style={{color: 'whitesmoke'}}>{Details.name}</Media>
                      <div style={{color: 'whitesmoke'}}>{Details.details}</div>
                   </Media>

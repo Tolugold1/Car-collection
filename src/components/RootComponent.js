@@ -4,6 +4,7 @@ import Header from './HeadComponent';
 import HeaderNav from './HeaderNavComponent'
 import Home from './HomeComponent';
 import Footer from './footer';
+import {TransitionGroup, CSSTransition} from 'react-transition-group';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import GalleryDisplay from './IndividualGallery';
 import Cars from './CarCollectionComponent';
@@ -45,13 +46,13 @@ class Root extends React.Component {
           <HeaderNav />
         </Headroom>
         <Header />
-        <Switch>
-          <Route exact path='/Home' component={() => <Home car={this.props.cars} carFailed={this.props.cars.errMess} carname={this.props.carname} failedTogetCarName = {this.props.carname.errMess} carLoading={this.props.cars.Loading} carnameLoading={this.props.carname.Loading}/>}/>
-          <Route path='/Home/:carId' component={CarGallery}/>
-          <Route path='/Cars' component={() => <Cars car={this.props.cars} carFailed = {this.props.cars.errMess} carLoading={this.props.cars.Loading}/>} />
-          <Route path='/Cars/:carId' component={CarGallery}/>
-          <Redirect exact to='/Home' />
-        </Switch>
+          <Switch>
+            <Route exact path='/Home' component={() => <Home car={this.props.cars} carFailed={this.props.cars.errMess} carname={this.props.carname} failedTogetCarName = {this.props.carname.errMess} carLoading={this.props.cars.Loading} carnameLoading={this.props.carname.Loading}/>}/>
+            <Route path='/Home/:carId' component={CarGallery}/>
+            <Route path='/Cars' component={() => <Cars car={this.props.cars} carFailed = {this.props.cars.errMess} carLoading={this.props.cars.Loading}/>} />
+            <Route path='/Cars/:carId' component={CarGallery}/>
+            <Redirect exact to='/Home' />
+          </Switch>
         <Footer />
       </div>
     )
