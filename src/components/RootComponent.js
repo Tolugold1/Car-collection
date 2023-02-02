@@ -4,7 +4,6 @@ import Header from './HeadComponent';
 import HeaderNav from './HeaderNavComponent'
 import Home from './HomeComponent';
 import Footer from './footer';
-import {TransitionGroup, CSSTransition} from 'react-transition-group';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import GalleryDisplay from './IndividualGallery';
 import Cars from './CarCollectionComponent';
@@ -22,6 +21,8 @@ const mapDispatchToProps = (dispatch) => ({
   fetchCARS: () => dispatch(fetchCARS()),
   fetchCarName: () => dispatch(fetchCarName())
 });
+
+
 class Root extends React.Component {
 
   componentDidMount() {
@@ -33,7 +34,7 @@ class Root extends React.Component {
   
     const CarGallery = ({match}) => {
       return(
-        <GalleryDisplay selectedCar={this.props.cars.cars.filter((carImage) => carImage.id === parseInt(match.params.carId, 10))[0]}
+        <GalleryDisplay selectedCar={this.props.cars.cars.filter((carImage) => carImage._id === match.params.carId)[0]}
         loading = {this.props.cars.Loading}
         carFailed = {this.props.cars.errMess}
         />

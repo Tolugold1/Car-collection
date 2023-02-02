@@ -14,8 +14,8 @@ const CarnameCard = ({ item, failedToGetCarName, carnameLoading }) => {
       <div>
         {item.carname.map((company) => {
           return(
-            <div key={ company.id }>
-              <Card key={ company.id } className='cardhover'>
+            <div key={ company._id }>
+              <Card className='cardhover'>
                 <CardImg width='100%' src={ baseUrl + company.image } alt={ company.name}></CardImg>
                 <CardBody>
                   <CardTitle>{ company.name }</CardTitle>

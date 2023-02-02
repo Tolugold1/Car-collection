@@ -29,7 +29,7 @@ class Footer extends React.Component {
                      <li className='mt-2'><a href='https://www.facebook.com/tolulope.stephen.94' ><span className='fa fa-facebook-official'></span> facebook</a></li>
                      <li className='mt-2'><a href='https://twitter.com/Tolugold6'><span className='fa fa-twitter-square'></span> Tolugold6</a></li>
                      <li className='mt-2'> <a href='https://github.com/Tolugold1' ><span className='fa fa-github-square'></span> Tolugold1</a></li>
-                     <li className='mt-2'><a href='tel:09063530888'><span className='fa fa-whatsapp'></span> 09063530888</a></li>
+                     <li className='mt-2'><a href='https://wa.me/+2349063530888'><span className='fa fa-whatsapp'></span> 09063530888</a></li>
                   </ul>
                </Col>
                <Col  sm="12" md="3" className=' mr-2 justify-content-center align-self-center'>

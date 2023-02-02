@@ -1,7 +1,6 @@
 import React from 'react';
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import { Media } from 'reactstrap';
-import Bugatti from '../Shared/bugati.jpeg';
 import { baseUrl } from '../Shared/URL';
 import Loading from './Loading'
 
@@ -20,7 +19,7 @@ const RenderImages = ({ Details, carFailed, loading }) => {
                   >
                   {Details.gallery.map((pics) => {
                      return(
-                        <React.Fragment key={pics.No}>
+                        <React.Fragment key={pics._id}>
                            <Item
                            original={baseUrl + pics.src}
                            thumbnail={baseUrl + pics.src}

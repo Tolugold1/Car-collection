@@ -16,8 +16,7 @@ export const fetchCARS = () => async (dispatch) => {
     error => {
       const errMess = new Error(error.message);
       throw errMess;
-    }
-    )
+    })
     .then(response => response.json())
     .then(cars => dispatch(addcar(cars)))
     .catch(error => {dispatch(car_failed(error.message))})
@@ -25,13 +24,13 @@ export const fetchCARS = () => async (dispatch) => {
 }
 
 export const addcar = (cars) => ({
-   type: prototypes.ADDCAR,
-   payload: cars
+  type: prototypes.ADDCAR,
+  payload: cars
 })
 
 export const car_failed = (errMess) => ({
-   type: prototypes.CARFAILED,
-   payload: errMess
+  type: prototypes.CARFAILED,
+  payload: errMess
 })
 
 export const carLoading = () => ({
