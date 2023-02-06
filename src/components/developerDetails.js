@@ -8,28 +8,28 @@ class Developer extends React.Component {
    render() {
       return(
          <>
-         <div id="Developer" className='conatiner' style={{backgroundColor: 'whitesmoke'}}>
-            <div className='row'>
-               <div className='col-12 col-sm-5 offset-1 mt-5 mb-5'>
-                  <Card style={{borderRadius: '5%', padding: '3px', background: 'black'}} className="developerPics">
-                     <CardImg style={{borderRadius: '5%'}} src={ baseUrl + 'image/IMG_20220515_094908_775.jpg'}/>
-                  </Card>
-               </div>
-               <div className='col-12 col-sm-5 mt-5 mb-5 developerInfo'>
-                  <Card style={{border: '0px'}}>
-                     <CardHeader><h2>Site developer's details</h2></CardHeader>
-                     <CardBody>
-                        <h3><strong>Name</strong>: Tolulope Adeleke</h3>
-                        <h3><strong>Nickname</strong>: Tolugold</h3>
-                        <h3><strong>Education status:</strong> Undergraduate</h3>
-                        <h3><strong>Skill-set:</strong><em>C programming language, python programming language, web developer(HTML5, CSS,Javascript, Reactjs)</em></h3>
-                        <p><strong>Plugins used for the development of this site are:</strong> Headroom, react-transition-group, react-photoswipe-gallery </p>
-                     </CardBody>
-                  </Card>
+            <div id="Developer" className='conatiner' style={{backgroundColor: 'whitesmoke'}}>
+               <div className='row justify-content-center'>
+                  <div className='col-12 col-sm-5 mt-5 mb-5, d-flex justify-content-center'>
+                     <Card style={{borderRadius: '5%', margin: '2px', backgroundColor: 'transparent', border: "0px", height: "400px", width: "391px"}} className="developerPics">
+                        <CardImg style={{borderRadius: '5%', height: "400px", width: "390px"}} src={ baseUrl + 'image/IMG_20220515_094908_775.jpg'}/>
+                     </Card>
+                  </div>
+                  <div className='col-12 col-sm-5 mt-5 mb-5 developerInfo'>
+                     <Card style={{border: '0px'}}>
+                        <CardHeader style={{border: '0px', background: "white"}}><h2>Site developer's details</h2></CardHeader>
+                        <CardBody>
+                           <h3><strong>Name</strong>: Tolulope Adeleke</h3>
+                           <h3><strong>Nickname</strong>: Tolugold</h3>
+                           <h3><strong>Education status:</strong> Bsc Computer Science</h3>
+                           <h3><strong>Skill-set:</strong><em> C programming language, python, web development (HTML5, CSS, Javascript, Reactjs, ExpressJs, Mongodb, MySql)</em></h3>
+                           <p><strong>Plugins used for the development of this site are:</strong> Headroom, react-photoswipe-gallery </p>
+                        </CardBody>
+                     </Card>
+                  </div>
                </div>
             </div>
-         </div>
-         <div id='slideImage' className='carpics' style={{ position: 'relative'}}>
+            <div id='slideImage' className='carpics' style={{ position: 'relative'}}>
                <div id='slider'>
                   <ul>
                      <li><img src={baseUrl + 'image/car1.jpeg'} width='280px' height='150px' alt="..." /></li>

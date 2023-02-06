@@ -14,8 +14,7 @@ const RenderImages = ({ Details, carFailed, loading }) => {
          <div className='container' style={{backgroundImage: `url(${ Details.image })`, backgroundSize:'cover', padding: '50px'}}>
             <div className='mb-3'>
                <Gallery>
-                  <div style={{display: 'grid',
-            gridTemplateColumns: 'repeat(4, 0fr)', gridGap: 5, justifyContent: 'center'}} 
+                  <div style={{}} className="individual_gallery"
                   >
                   {Details.gallery.map((pics) => {
                      return(
@@ -51,7 +50,7 @@ const RenderImages = ({ Details, carFailed, loading }) => {
                {Details.details ? 
                <Media>
                   <Media left middle href='#'>
-                     <Media object src={baseUrl + Details.image } width='160px' height='100px' alt='car image'/>
+                     <Media object src={baseUrl + Details.image } width='160px' height='100px' alt='car image' className='d-none d-sm-block'/>
                   </Media>
                   <Media body className='m-body ml-3'>
                      <Media heading tag='h2' style={{color: 'whitesmoke'}}>{Details.name}</Media>

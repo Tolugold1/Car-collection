@@ -49,14 +49,14 @@ Nav {
 }
 
 .innerdiv {
-  margin: 120px;
+  margin: 20px;
 }
 
 .innertext, .innertext1{
   font-family: Koulen;
   font-size: 100px;
   font-weight: bolder;
-  color:rgba(166, 114, 54, 0.7);
+  color:rgba(135, 105, 76, 0.9);
 }
 
 #step2 {
@@ -147,7 +147,9 @@ ul {
 
 .developerPics:hover {
   margin-top: 2px;
-  box-shadow: 4 6px 10px  4 rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.5);
+  border: 0px;
+  background-color: transparent;
 }
 
 .m-body {
@@ -155,6 +157,12 @@ ul {
   overflow-y: scroll;
 }
 
+.individual_gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 0fr);
+  gap: 5px;
+  justify-content: center
+}
 
 
 
@@ -172,12 +180,18 @@ ul {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .innertext, .innertext1{
     font-family: Koulen;
     font-size: 80px;
     font-weight: bolder;
-    color:rgba(166, 114, 54, 0.7);
+    color:rgba(135, 105, 76, 0.9)
+  }
+  .individual_gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 5px;
+    justify-content: center
   }
 }
 
@@ -186,7 +200,13 @@ ul {
     font-family: Koulen;
     font-size: 60px;
     font-weight: bolder;
-    color:rgba(166, 114, 54, 0.7);
+    color:rgba(135, 105, 76, 0.9)
+  }
+  .individual_gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    gap: 5px;
+    justify-content: center
   }
 }
 
@@ -195,17 +215,28 @@ ul {
     font-family: Koulen;
     font-size: 40px;
     font-weight: bolder;
-    color: rgba(166, 114, 54, 0.7);
+    color:rgba(135, 105, 76, 0.9)
   }
-  
+  .individual_gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    gap: 5px;
+    justify-content: center
+  }
 }
 
 @media (max-width: 575px) {
   .innertext, .innertext1{
     font-family: Koulen;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bolder;
-    color:rgba(166, 114, 54, 0.7);
+    color:rgba(135, 105, 76, 0.9)
+  }
+  .individual_gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    gap: 5px;
+    justify-content: center
   }
 }
 
